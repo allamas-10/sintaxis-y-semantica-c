@@ -17,6 +17,14 @@ int main(){
     assert(ToInteger("1232") == 1232);
     assert(ToInteger("") == 0);
 
+    assert(Contains("Hola", 'o') == true);
+    assert(Contains("Hola", 'z') == false);
+    assert(Contains("", 'a') == false);
+
+    assert(StartsWith("Hola mundo", "Hola") == true);
+    assert(StartsWith("Hola mundo", "mundo") == false);
+    assert(StartsWith("Hola", "") == true);
+
     char bufferConc[20] = "Hola";
     Concatenate(bufferConc, " mundo");
     assert(AreEqual(bufferConc, "Hola mundo") == true);
@@ -24,6 +32,10 @@ int main(){
     char bufferPower[20] = "vaca";
     Power(bufferPower, 3);
     assert(AreEqual(bufferPower, "vacavacavaca") == true);
+
+    char bufferRev[10] = "abc";
+    Reverse(bufferRev);
+    assert(AreEqual(bufferRev, "cba") == true);
 
     return 0;
 }
