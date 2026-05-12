@@ -5,7 +5,7 @@ bool IsEmpty(const char* s){
 }
 
 size_t GetLength(const char* s){
-    if(s[0] == '\0') return 0;
+    if(s == NULL || s[0] == '\0') return 0;
 
     return 1 + GetLength(s + 1);
 }
@@ -109,4 +109,10 @@ void Reverse(char* s){
     }
 
     return;
+}
+bool StartsWith(const char* s, const char* prefix){
+    if(IsEmpty(prefix)) return true;
+    if(IsEmpty(s)) return false;
+    if(s[0] != prefix[0]) return false;
+    return StartsWith(s + 1, prefix + 1);
 }

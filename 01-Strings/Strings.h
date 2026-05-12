@@ -58,4 +58,10 @@ Post: Invierte la cadena
 */
 void Reverse(char* s);
 
+/*
+Pre: Puntero a dos cadenas terminadas en \0
+Post: Devuelve true si s comienza con el prefijo dado, false en caso contrario
+*/
+bool StartsWith(const char* s, const char* prefix);
+
 #endif

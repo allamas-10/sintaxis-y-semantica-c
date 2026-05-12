@@ -84,3 +84,14 @@ Firma: Power: Σ* x N0 -> Σ*
 ## 9. Reverse (Invertir)
 Da vuelta el orden de los caracteres de la cadena original.
 Firma: Reverse: Σ* -> Σ*
+
+
+## 10. StartsWith (Empieza con)
+Verifica si la cadena 's' comienza con el prefijo dado.
+Firma: StartsWith: Σ* x Σ* -> B
+
+StartsWith(s, prefix) =
+  * true, si prefix = ε
+  * false, si s = ε y prefix ≠ ε
+  * false, si el primer carácter de s es distinto al primer carácter de prefix
+  * StartsWith(t, u), si los primeros caracteres son iguales (t y u son los restos)
