@@ -38,6 +38,7 @@ int main(void) {
 
     do {
         t = get_token();
+        procesar_token(t);
 
     } while (t != TOKEN_FDT);
 
