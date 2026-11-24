@@ -5,4 +5,5 @@
 int main(void) {
     return yyparse();
     liberar_diccionario();
+    return 0;
 }
