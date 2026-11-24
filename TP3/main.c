@@ -3,7 +3,7 @@
 #include "calc.h"
 
 int main(void) {
-    return yyparse();
+    int resultado = yyparse();
     liberar_diccionario();
-    return 0;
+    return resultado;
 }
