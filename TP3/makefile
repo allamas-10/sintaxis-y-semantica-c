@@ -10,7 +10,7 @@ parser.c parser.h: parser.y
 scanner.c scanner.h: scanner.l
 	flex scanner.l
 
-main.o: main.c parser.h
+main.o: main.c parser.h calc.h
 	$(CC) $(CFLAGS) -c main.c
 
 parser.o: parser.c parser.h calc.h
