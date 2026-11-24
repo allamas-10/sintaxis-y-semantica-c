@@ -52,7 +52,7 @@ double obtener_valor(const char* nombre){
     NodoVariable* var = buscar_variable(nombre);
 
     if(var == NULL){
-        var = crear_variable(nombre, valor);
+        var = crear_variable(nombre, 0.0);
     }
     return var->valor;
 }
@@ -60,7 +60,7 @@ double obtener_valor(const char* nombre){
 double asignar_valor(const char* nombre, double valor){
     NodoVariable* var = buscar_variable(nombre);
     if(var == NULL){
-        var = crear_variable(nombre, 0.0);
+        var = crear_variable(nombre, valor);
     }
     else{
         var->valor = valor;
