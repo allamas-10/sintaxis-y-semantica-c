@@ -58,7 +58,7 @@ expresion
                                         printf("Error semantico: division por cero \n");
                                         YYERROR;
                                     }
-                                    $$ = $1 / $$3;
+                                    $$ = $1 / $3;
                                 }
     | '-' expresion %prec NEG   { $$ = -$2;}
     | expresion '^' expresion   { $$ = pow($1, $3); }
